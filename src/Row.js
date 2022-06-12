@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import axios from "./axios";
 
 function Row({ title, fetchUrl }) {
   const [movies, setMovies] = useState([]);
@@ -8,7 +8,13 @@ function Row({ title, fetchUrl }) {
   useEffect(() => {
     //if [], run once when the row loads and dont run again
     //if [movies], var movies changes it will run again plus run once at start
-  }, [movies]);
+    async function fetchData() {
+      const request = await axios.get(fetchUrl);
+      console.log(request.data.results);
+      return request;
+    }
+    fetchData();
+  }, []);
 
   return (
     <div>
