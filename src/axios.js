@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // base url to make requests to the movie databse
-const instance = axios.created({
+const instance = axios.create({
   baseURL: "https://api.themovie.org/3",
 });
 
