@@ -27,7 +27,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
       <div className="row__posters">
         {movies.map((movie) => (
           <img
-            key={movie.id}
+            key={movie.id} //key is used here to load faster or efficient rendering by only re rendering if movie.id is changing
             className={`row__poster ${isLargeRow && "row__posterLarger"}`}
             src={`${baseUrl}${
               isLargeRow ? movie.poster_path : movie.backdrop_path

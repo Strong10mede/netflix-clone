@@ -17,10 +17,19 @@ function Banner() {
   }, []);
   console.log(movie);
   return (
-    <header className="banner">
+    <header
+      className="banner"
+      style={{
+        backgroundSize: "cover",
+        backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+        //question mark ? is used if ${movie} doesn't load then don't crash justt load without it
+        backgroundPosition: "center center",
+      }}
+    >
       <div className="banner__content">
         {/*<<<background image*/}
         {/* title */}
+        <h1>{movie?.title || movie?.name || movie?.orignal_name}</h1>
         {/* div->2 buttons */}
         {/* description */}
       </div>
