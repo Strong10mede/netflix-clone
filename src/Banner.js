@@ -17,11 +17,13 @@ function Banner() {
   }, []);
   console.log(movie);
   return (
-    <header>
-      {/*<<<background image*/}
-      {/* title */}
-      {/* div->2 buttons */}
-      {/* description */}
+    <header className="banner">
+      <div className="banner__content">
+        {/*<<<background image*/}
+        {/* title */}
+        {/* div->2 buttons */}
+        {/* description */}
+      </div>
     </header>
   );
 }
