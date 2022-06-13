@@ -23,8 +23,17 @@ function Row({ title, fetchUrl }) {
   console.log(movies);
 
   return (
-    <div>
+    <div className="row">
       <h2>{title}</h2>
+      <div className="row_posters">
+        {movies.map((movie) => (
+          <img
+            className="row_poster"
+            src={`${baseUrl}${movie.poster_path}`}
+            alt={`movie.name`}
+          />
+        ))}
+      </div>
     </div>
   );
 }
