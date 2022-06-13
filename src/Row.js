@@ -11,10 +11,12 @@ function Row({ title, fetchUrl }) {
     async function fetchData() {
       const request = await axios.get(fetchUrl);
       console.log(request.data.results);
+      setMovies(request.data.results);
       return request;
     }
     fetchData();
-  }, []);
+  }, [fetchUrl]);
+  //in above array space write the variables used in  useEffect as it is a dependency we have to write it
 
   return (
     <div>
