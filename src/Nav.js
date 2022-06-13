@@ -11,6 +11,7 @@ function Nav() {
         handleShow(false);
       }
     });
+    //everytime useEffect fires due to any reason,before firing off again remove eventListener so you dont have 20 eventlistener
     return () => {
       window.removeEventListener("scroll");
     };
