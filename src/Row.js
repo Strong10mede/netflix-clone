@@ -16,7 +16,9 @@ function Row({ title, fetchUrl }) {
     }
     fetchData();
   }, [fetchUrl]);
-  //in above array space write the variables used in  useEffect as it is a dependency we have to write it
+  //in above array space write the variables used in  useEffect as it is a dependency we have to write it and if not useEffect will not render again
+
+  console.log(movies);
 
   return (
     <div>
