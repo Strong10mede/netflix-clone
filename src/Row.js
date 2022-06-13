@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "./axios";
 
+const baseUrl = "https://image.tmdb.org/t/p/original/";
+
 function Row({ title, fetchUrl }) {
   const [movies, setMovies] = useState([]);
 
