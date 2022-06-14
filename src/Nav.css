@@ -1,5 +1,7 @@
 .nav {
   position: fixed;
+  justify-content: space-between;
+  display: flex;
   top: 0;
   width: 100%;
   padding: 1.25rem;
