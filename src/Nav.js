@@ -4,7 +4,7 @@ import Netflix_Avatar from "./Netflix-avatar.png";
 import "./Nav.css";
 
 function Nav() {
-  const [show, handleShow] = useState([]);
+  const [show, handleShow] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -15,9 +15,9 @@ function Nav() {
       }
     });
     //everytime useEffect fires due to any reason,before firing off again remove eventListener so you dont have 20 eventlistener
-    // return () => {
-    //   window.removeEventListener("scroll");
-    // };
+    return () => {
+      window.removeEventListener("scroll", null);
+    };
   }, []);
 
   return (

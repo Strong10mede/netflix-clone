@@ -22,7 +22,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
     fetchData();
   }, [fetchUrl]);
   //in above array space write the variables used in  useEffect as it is a dependency we have to write it and if not useEffect will not render again
-
+  console.log(movies);
   const opts = {
     height: "390",
     width: "100%",
