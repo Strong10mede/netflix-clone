@@ -6,19 +6,19 @@ import "./Nav.css";
 function Nav() {
   const [show, handleShow] = useState([]);
 
-  //   useEffect(() => {
-  //     window.addEventListener("scroll", () => {
-  //       if (window.scrollY > 100) {
-  //         handleShow(true);
-  //       } else {
-  //         handleShow(false);
-  //       }
-  //     });
-  //     //everytime useEffect fires due to any reason,before firing off again remove eventListener so you dont have 20 eventlistener
-  //     return () => {
-  //       window.removeEventListener("scroll");
-  //     };
-  //   }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 150) {
+        handleShow(true);
+      } else {
+        handleShow(false);
+      }
+    });
+    //everytime useEffect fires due to any reason,before firing off again remove eventListener so you dont have 20 eventlistener
+    // return () => {
+    //   window.removeEventListener("scroll");
+    // };
+  }, []);
 
   return (
     <div className={`nav ${show && "nav__black"}`}>
