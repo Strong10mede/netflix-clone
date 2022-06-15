@@ -1,5 +1,5 @@
-## `TO TEST THE CLONE
-[Click me](https://netflix-clone-aa862.web.app)`
+# `TO TEST THE CLONE`
+[Click me](https://netflix-clone-aa862.web.app)
 
 # Getting Started with Create React App
 
