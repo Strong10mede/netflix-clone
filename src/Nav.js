@@ -15,6 +15,8 @@ function Nav() {
       }
     });
     //everytime useEffect fires due to any reason,before firing off again remove eventListener so you dont have 20 eventlistener
+    //it removes the old added listener listener from CleanUp function and adds the new one
+    //CleanUp function is called when UseEffect is called again or on umounted
     return () => {
       window.removeEventListener("scroll", null);
     };
